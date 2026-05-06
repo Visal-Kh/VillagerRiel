@@ -1,0 +1,18 @@
+name: VillagerRiel
+version: '1.0'
+main: org.yuno.villagerriel.VillagerRiel
+api-version: '1.21'
+authors: [LoyaltyMC]
+description: ប្តូរ Villager trades ពី Emerald មក លុយរៀលខ្មែរ
+depend: [RielItem]
+
+commands:
+  vtrade:
+    description: VillagerRiel commands
+    usage: /<command> [reload|rate|convertall]
+    permission: villagerriel.admin
+
+permissions:
+  villagerriel.admin:
+    description: Admin
+    default: op
