@@ -1,0 +1,39 @@
+name: Build VillagerRiel JAR
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Install RielItem to Maven
+        run: |
+          mvn install:install-file \
+            -Dfile=libs/RielItem_v1_1_loyalty.jar \
+            -DgroupId=org.yuno.rielitem \
+            -DartifactId=RielItem \
+            -Dversion=1.1 \
+            -Dpackaging=jar \
+            -q
+
+      - name: Build VillagerRiel
+        run: mvn clean package -q
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: VillagerRiel_v1_0
+          path: target/VillagerRiel_v1_0.jar
