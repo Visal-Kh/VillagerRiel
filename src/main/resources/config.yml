@@ -1,0 +1,10 @@
+settings:
+  emerald-to-riel-rate: 500
+  auto-convert-on-restock: true
+  convert-on-trade-open: true
+
+messages:
+  converted: "Trades ត្រូវបានប្តូរទៅ លុយរៀល!"
+  rate-info: "Rate: 1 Emerald = {rate} ៛"
+  reloaded: "Config reloaded!"
+  no-permission: "អ្នកមិនមានសិទ្ធិ!"
