@@ -1,7 +1,7 @@
 name: VillagerRiel
 version: '1.0'
 main: org.yuno.villagerriel.VillagerRiel
-api-version: '1.21'
+api-version: '1.21.11'
 authors: [LoyaltyMC]
 description: ប្តូរ Villager trades ពី Emerald មក លុយរៀលខ្មែរ
 depend: [RielItem]
